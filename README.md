@@ -16,7 +16,7 @@ When trying to monitor the driver's dizziness😵‍, the systems inside the car
 ![Dummy image](https://github.com/L-eonor/CES_Kalman_WS/blob/main/images/dummy_with_landmarks.jpg)
 
 
-The point behind the nose is the starting point to understanding the driver's roll, pitch and yaw. With that, we can derive the direction of the face. Then with the eye analysis, the loop is more or less closed.
+The point behind the nose is the starting point to understanding the driver's face roll, pitch and yaw. With that, we can derive the direction of the face. Then with the eye analysis, the loop is more or less closed.
 
 
 ## Workshop Roadmap
