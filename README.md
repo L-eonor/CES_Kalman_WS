@@ -13,7 +13,7 @@ The [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter) is a widely use
 When trying to monitor the driver's dizziness😵‍, the systems inside the car try to gather a set of the face's landmarks. That will give an estimation regarding what the driver is looking at. Here we can see a dummy and the corresponding face landmarks.
 
 
-![Dummy image](https://myoctocat.com/assets/images/base-octocat.svg)
+![Dummy image](https://github.com/L-eonor/CES_Kalman_WS/blob/main/images/dummy_with_landmarks.jpg)
 
 
 The point behind the nose is the starting point to understanding the driver's roll, pitch and yaw. With that, we can derive the direction of the face. Then with the eye analysis, the loop is more or less closed.
