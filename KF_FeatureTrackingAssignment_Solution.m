@@ -109,31 +109,31 @@ for t=1:NumSamples
     %% Update Step
 
     % Update Kalman Gain
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % YOUR CODE HERE %%%%%%%%%%%%%%%
-    % Hint:Measurements may be incomplete
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
-    %K = ... ; % uncomment this line
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    K = P*C'*inv(C*P*C' + R);
     
-    % Update State Vector
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % YOUR CODE HERE %%%%%%%%%%%%%%%
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
-    %StateVector = ... ; % uncomment this line
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     if ~(isnan(MeasuredPosition(:,t)))
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% YOUR CODE HERE %%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
+		%K = ... ; % uncomment this line
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		K = P*C'*inv(C*P*C' + R);
+	
+		% Update State Vector
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% YOUR CODE HERE %%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
+		%StateVector = ... ; % uncomment this line
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         StateVector = StateVector + K*(MeasuredPosition(:,t) - C * StateVector);
-    end
 
-    % Update Covariance
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % YOUR CODE HERE %%%%%%%%%%%%%%%
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
-    %P = ... ; % uncomment this line
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    P = P-K*C*P;
+		% Update Covariance
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% YOUR CODE HERE %%%%%%%%%%%%%%%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%            
+		%P = ... ; % uncomment this line
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		P = P-K*C*P;
+    end
 
     % Store Data
     PositionEstimate=[PositionEstimate; StateVector(1:2)];
